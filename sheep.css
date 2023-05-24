@@ -1,0 +1,80 @@
+html, 
+body,
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #1E1E1E;
+}
+html, body {
+    min-height: 100vh; 
+}
+.parentContainer{
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    font-family: 'Rubik Bubbles';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6rem;
+    line-height: 154px;
+    margin: auto;
+    color: #FFFFFF;
+}
+img {
+    filter: drop-shadow(4px -5px 44px rgba(255, 255, 255, 0.25));
+}
+.heading {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.container {
+    display: flex;
+}
+.leftPanel, .rightPanel{
+    display: flex;
+}
+@media (min-width: 768px) {
+   
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .rightPanel{
+    width: 50%;
+margin: 7% 4% 5% 10%;
+}
+    img{
+        position: absolute;
+        width: 40vw;
+        height: auto;
+        /* left: 15px; */
+        top: 380px;
+    }
+}
+@media only screen and (min-width: 200px) and (max-width: 767px)  {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .leftPanel, .rightPanel{
+        justify-content: center;
+    }
+    img{
+        width: 70%;
+    }
+    .container {
+    flex-direction: column-reverse;
+    justify-content: center;
+    }
+}
+
+
+
+
+
