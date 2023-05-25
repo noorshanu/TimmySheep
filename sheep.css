@@ -30,8 +30,9 @@ img {
     filter: drop-shadow(4px -5px 44px rgba(255, 255, 255, 0.25));
 }
 .heading {
-    display: flex;
-    align-items: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
     text-align: center;
 }
 .container {
@@ -40,8 +41,29 @@ img {
 .leftPanel, .rightPanel{
     display: flex;
 }
+html {
+    scroll-behavior: smooth;
+  }
+.social-links{
+        display: flex;
+        justify-content: space-around;
+        width:100px;
+        height:60px;
+        margin: auto;
+}
 @media (min-width: 768px) {
-   
+    .rightPanel{
+        flex-direction: column;
+    }
+    .social-links{
+        margin-top: 1rem;
+    }
+    .buy-now-button{
+        display: none;
+    }
+   .social-links-mobile{
+    display: none;
+   }
     .container {
         flex-direction: row;
         justify-content: space-between;
@@ -50,7 +72,7 @@ img {
     width: 50%;
 margin: 7% 4% 5% 10%;
 }
-    img{
+    .sheepImage{
         position: absolute;
         width: 40vw;
         height: auto;
@@ -61,16 +83,47 @@ margin: 7% 4% 5% 10%;
 @media only screen and (min-width: 200px) and (max-width: 767px)  {
     h1 {
         font-size: 2.5rem;
+        line-height: 80px;
     }
     .leftPanel, .rightPanel{
         justify-content: center;
     }
-    img{
+    .sheepImage{
         width: 70%;
     }
     .container {
     flex-direction: column-reverse;
     justify-content: center;
+    }
+    .heading{
+        display: flex;
+        margin-bottom:20px;
+    }
+    .social-links-mobile{
+        display: flex;
+        justify-content: space-around;
+        width:100px;
+        height:60px;
+        margin: auto;
+    }
+    .social-links-mobile img{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .heading{
+        display: block;
+    }
+    .buy-now-button{
+        padding:20px;
+        background-color:#0f4a79;
+        color:white;
+        border-radius: 10px;
+        border:1px solid black;
+        font-size: 15px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .social-links{
+        display: none;
     }
 }
 
